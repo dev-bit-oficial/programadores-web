@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBit | Inicio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #4cc9f0;
+        }
+        .hero {
+            background-image: url(https://img.freepik.com/fotos-premium/representacion-abstracta-3d-habitaciones-ventanas-bordes-neon-efecto-luz-azul_288179-235.jpg?w=826);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero:hover {
+            animation: backgroundZoom 2s infinite alternate;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @keyframes backgroundZoom {
+            0% {
+                background-size: 100%;
+            }
+            100% {
+                background-size: 110%;
+            }
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(76, 201, 240, 0.3);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #4cc9f0, #4361ee);
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(76, 201, 240, 0.4);
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 50px 0;
+        }
+        .feature {
+            flex-basis: calc(33.333% - 40px);
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+            color: #4cc9f0;
+        }
+        .feature span {
+            margin-top: 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: rgb(255, 20, 20)
+        }
+        .logo-image {
+            width: 20px;
+            height: 20px;
+            border-radius: 12.5%;
+        }
+        .container-footer {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.05);
+        }.footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .feature {
+                flex-basis: 100%;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="logo-image">
+            <img src="favicon.ico" alt="Logo" height="75px" width="75px" style="margin-left: 20px;">
+        </nav>
+        <nav class="container" style="display: flex; justify-content: flex-end; align-items: center;">
+            <div class="hamburger-menu"></div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="menu" style="margin-right: 10px;">
+                <li><a style="cursor: no-drop;">Inicio</a></li>
+                <li><a href="https://dev-bit-oficial.github.io/programadores-web/servicios">Servicios</a></li>
+                <li><a href="https://dev-bit-oficial.github.io/programadores-web/sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="https://dev-bit-oficial.github.io/programadores-web/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <style>
+            .hamburger-menu {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            }
+            .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            }
+            .menu-icon span {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            transition: 0.4s;
+            }
+            #menu-toggle {
+            display: none;
+            }
+            #menu-toggle:checked + .menu-icon span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            #menu-toggle:checked + .menu-icon span:nth-child(2) {
+            opacity: 0;
+            }
+            #menu-toggle:checked + .menu-icon span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+            }
+            .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 90%;
+            right: 0px;
+            background: #313346;
+            border-radius: 5px;
+            padding: 10px;
+            }
+            #menu-toggle:checked ~ .menu {
+            display: flex;
+            }
+            .menu li {
+            list-style: none;
+            margin: 10px 0;
+            }
+            .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            }
+        </style>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>DevBit</h1>
+                <p>Soluciones de programación avanzadas para el mundo del mañana</p>
+                <a href="https://dev-bit-oficial.github.io/programadores-web/sobre-nosotros/" class="cta-button">Conócenos</a>
+            </div>
+        </section>
+
+        <section class="features container">
+            <div class="feature">
+                <h3>Desarrollo Web</h3>
+                <p>Creamos sitios web modernos y responsivos utilizando las últimas tecnologías.</p>
+            </div>
+            <div class="fea2ture">
+                <h3>Registros en Páginas Web</h3>
+                <p>Implementamos registros con cuentas para optimizar tus procesos de negocio.</p>
+            </div>
+            <div class="feature">
+                <h3>Aplicaciones Móviles</h3>
+                <p>Desarrollamos apps nativas y multiplataforma para iOS y Android.</p>
+                <span>Próximamente. Buscando al mejor para lo mejor.</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container-footer footer-content">
+            <img src="favicon.ico" alt="Logo" class="logo-image">
+            <p>&copy; 2025 FutureDev. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
